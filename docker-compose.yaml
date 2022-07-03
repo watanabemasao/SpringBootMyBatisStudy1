@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql:8.0.28
+    container_name: mysql_test
+    platform: linux/x86_64
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - 3307:3306
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./conf/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+volumes:
+  mysql-volume:
