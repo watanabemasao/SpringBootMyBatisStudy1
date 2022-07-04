@@ -1,11 +1,13 @@
 package com.example.springbootmybatis.entity;
 
-public class TestEntity {
+import java.time.LocalDate;
+
+public class UserEntity {
     private int id;
     private String name;
-    private String birthday;
+    private LocalDate birthday;
 
-    public TestEntity(int id, String name, String birthday) {
+    public UserEntity(int id, String name, LocalDate birthday) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -19,7 +21,7 @@ public class TestEntity {
         return name;
     }
 
-    public String getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
@@ -27,7 +29,7 @@ public class TestEntity {
         this.name = name;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 }
