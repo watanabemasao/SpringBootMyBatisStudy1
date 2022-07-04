@@ -1,6 +1,6 @@
-create table User
+create table Users
 (
-    id        integer unsigned null,
-    name      varchar(255)     null,
-    birthdate date             null
+    id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL ,
+    name NVARCHAR(255) NOT NULL ,
+    birthday DATE NOT NULL
 );
