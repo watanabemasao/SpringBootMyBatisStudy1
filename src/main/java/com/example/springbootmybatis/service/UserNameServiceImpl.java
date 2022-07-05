@@ -8,7 +8,7 @@ import javax.lang.model.element.Name;
 import java.util.List;
 
 @Service
-public class UserNameServiceImpl implements UserNameServise {
+public class UserNameServiceImpl implements UserNameService {
     private UserMapper userMapper;
 
     public UserNameServiceImpl(UserMapper userMapper){

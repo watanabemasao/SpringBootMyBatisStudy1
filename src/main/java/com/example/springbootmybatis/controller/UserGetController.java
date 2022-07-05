@@ -1,6 +1,6 @@
 package com.example.springbootmybatis.controller;
 
-import com.example.springbootmybatis.service.UserNameServise;
+import com.example.springbootmybatis.service.UserNameService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,14 +8,15 @@ import java.util.List;
 
 @RestController
 public class UserGetController {
-    private final UserNameServise userNameServise;
+    private final UserNameService userNameService;
 
-    public UserGetController(UserNameServise userNameServise){
-        this.userNameServise =userNameServise;
+    public UserGetController(UserNameService userNameService){
+        this.userNameService =userNameService;
     }
 
-    @GetMapping("/names")
+    @GetMapping("/Users")
     public List<NameResponse> getNames() {
-        return UserNameServise.findAll().stream().map(NameResponse::new).toList();
+        return userNameService.findAll().stream().map(NameResponse::new).toList();
     }
+
 }
