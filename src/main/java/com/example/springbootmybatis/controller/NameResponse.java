@@ -10,9 +10,9 @@ public class NameResponse {
     private LocalDate birthday;
 
     public NameResponse(UserEntity userEntity) {
-        this.id = id;
-        this.name = name;
-        this.birthday = birthday;
+        this.id = userEntity.getId();
+        this.name = userEntity.getName();
+        this.birthday = userEntity.getBirthday();
     }
 
     public int getId() {

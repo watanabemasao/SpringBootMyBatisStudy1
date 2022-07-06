@@ -14,7 +14,7 @@ public class UserGetController {
         this.userNameService =userNameService;
     }
 
-    @GetMapping("/Users")
+    @GetMapping("/users")
     public List<NameResponse> getNames() {
         return userNameService.findAll().stream().map(NameResponse::new).toList();
     }

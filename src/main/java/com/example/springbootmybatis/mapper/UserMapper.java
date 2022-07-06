@@ -9,10 +9,9 @@ import java.util.Optional;
 
 @Mapper
 public interface UserMapper {
-    @Select("SELECT * Users")
+    @Select("SELECT * FROM users")
     List<UserEntity> findAll();
-    @Select("SELECT * FROM Users WHERE id = #{id}")
+    @Select("SELECT * FROM users WHERE id = #{id}")
     Optional<UserEntity> findById(int id);
-
 
 }
