@@ -2,7 +2,7 @@ package com.example.springbootmybatis.entity;
 
 import java.time.LocalDate;
 
-public class UserEntity<N> {
+public class UserEntity {
     private int id;
     private String name;
     private LocalDate birthday;
