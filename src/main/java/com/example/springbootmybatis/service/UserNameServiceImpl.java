@@ -21,7 +21,7 @@ public class UserNameServiceImpl implements UserNameService {
     }
 
     @Override
-    public Optional<UserEntity> findById(int id) throws Exception {
+    public Optional<UserEntity> findById(int id) {
         return userMapper.findById(id);
     }
 
