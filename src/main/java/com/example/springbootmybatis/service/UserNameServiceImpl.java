@@ -4,8 +4,8 @@ import com.example.springbootmybatis.entity.UserEntity;
 import com.example.springbootmybatis.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
-import javax.lang.model.element.Name;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserNameServiceImpl implements UserNameService {
@@ -21,8 +21,8 @@ public class UserNameServiceImpl implements UserNameService {
     }
 
     @Override
-    public Name findById(int id) throws Exception {
-        return null;
+    public Optional<UserEntity> findById(int id) {
+        return userMapper.findById(id);
     }
 
     @Override
